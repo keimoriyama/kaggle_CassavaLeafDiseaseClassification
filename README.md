@@ -45,6 +45,7 @@ etc.
 |[Sharing some improvements and experiments](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/203594)|金メダル圏内の人の精度を上げるためのヒントみたいなの|
 |[[place holder] let's try something new ... vision transformer](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/199276)|vision Transformerの話と思ったら、いろいろなモデルについて語ってある|
 |[Research Papers related to this competition](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/198146)| このコンペに関する論文のまとめ　|
+|[Important points to boost the LB score](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/208402)|LBを爆上げする方法みたいなの|
 
 # Notebooks
 
