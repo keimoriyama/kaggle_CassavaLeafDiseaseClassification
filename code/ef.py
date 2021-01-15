@@ -1,6 +1,6 @@
 import timm
 
-ef_model = timm.create_model("resnet50", pretrained = True)
+ef_model = timm.create_model("vit_base_patch32_384", pretrained = True)
 from torchsummary import summary
 print(summary(ef_model, (3, 512, 512)))
 

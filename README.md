@@ -40,21 +40,21 @@ etc.
 
 # Discussion
 
-|題名（URL）|内容|
-|:--:|:--:|
-|[Sharing some improvements and experiments](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/203594)|金メダル圏内の人の精度を上げるためのヒントみたいなの|
-|[[place holder] let's try something new ... vision transformer](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/199276)|vision Transformerの話と思ったら、いろいろなモデルについて語ってある|
-|[Research Papers related to this competition](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/198146)| このコンペに関する論文のまとめ　|
-|[Important points to boost the LB score](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/208402)|LBを爆上げする方法みたいなの|
+|                                                                   題名（URL）                                                                   |                                 内容                                 |
+| :---------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------: |
+|           [Sharing some improvements and experiments](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/203594)           |         金メダル圏内の人の精度を上げるためのヒントみたいなの         |
+| [[place holder] let's try something new ... vision transformer](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/199276) | vision Transformerの話と思ったら、いろいろなモデルについて語ってある |
+|          [Research Papers related to this competition](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/198146)          |                    このコンペに関する論文のまとめ                    |
+|            [Important points to boost the LB score](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/208402)             |                     LBを爆上げする方法みたいなの                     |
 
 # Notebooks
 
 
-|題名（URL）|内容|
-|:--:|:--:|
-|[Vision Transformer (ViT): Tutorial + Baseline](https://www.kaggle.com/abhinand05/vision-transformer-vit-tutorial-baseline)| Vision Transfomerのチュートリアル|
-|[Vision Transformer (ViT): CUDA as usual](https://www.kaggle.com/szuzhangzhi/vision-transformer-vit-cuda-as-usual/data)| Vision Transformerのpythonライブラリを使って学習させるサンプル。自作らしい。|
-|[Ensemble: Resnext50_32x4d + Efficientnet = 0.903](https://www.kaggle.com/japandata509/ensemble-resnext50-32x4d-efficientnet-0-903)|題名のまま|
+|                                                             題名（URL）                                                             |                                     内容                                     |
+| :---------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
+|     [Vision Transformer (ViT): Tutorial + Baseline](https://www.kaggle.com/abhinand05/vision-transformer-vit-tutorial-baseline)     |                      Vision Transfomerのチュートリアル                       |
+|       [Vision Transformer (ViT): CUDA as usual](https://www.kaggle.com/szuzhangzhi/vision-transformer-vit-cuda-as-usual/data)       | Vision Transformerのpythonライブラリを使って学習させるサンプル。自作らしい。 |
+| [Ensemble: Resnext50_32x4d + Efficientnet = 0.903](https://www.kaggle.com/japandata509/ensemble-resnext50-32x4d-efficientnet-0-903) |                                  題名のまま                                  |
 
 # Logs
 
@@ -140,4 +140,4 @@ fine-tuningするような構成になったので、前処理を追加して見
 
 Efficient netのPublic Scoreが良くない。学習時のAccが良いのになんでだろう。
 
-ensembleでViTを使っている人は少ないから、ResNetに切り替えようかな
+画像サイズを変えて試してみる
