@@ -54,6 +54,7 @@ etc.
 |:--:|:--:|
 |[Vision Transformer (ViT): Tutorial + Baseline](https://www.kaggle.com/abhinand05/vision-transformer-vit-tutorial-baseline)| Vision Transfomerのチュートリアル|
 |[Vision Transformer (ViT): CUDA as usual](https://www.kaggle.com/szuzhangzhi/vision-transformer-vit-cuda-as-usual/data)| Vision Transformerのpythonライブラリを使って学習させるサンプル。自作らしい。|
+|[Ensemble: Resnext50_32x4d + Efficientnet = 0.903](https://www.kaggle.com/japandata509/ensemble-resnext50-32x4d-efficientnet-0-903)|題名のまま|
 
 # Logs
 
@@ -128,3 +129,15 @@ KFoldを使ってデータを分割して学習させる（discussionに精度�
 モデルのアンサンブルは有効みたい
 
 2つのモデルをカーネル上で訓練するのは無謀なので1つはローカルで訓練して重みをアップロードする方向で行きたい
+
+## 2021/01/25
+
+アンサンブルした。ViTよりもEfficient Netのほうが精度が良かった。
+
+fine-tuningするような構成になったので、前処理を追加して見ようかな。
+
+画像のバランスを変えてある程度差が無いようにしたい。
+
+Efficient netのPublic Scoreが良くない。学習時のAccが良いのになんでだろう。
+
+ensembleでViTを使っている人は少ないから、ResNetに切り替えようかな
