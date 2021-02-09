@@ -156,3 +156,13 @@ highスコアが出た（0.887)
 データの偏りをなくすようなノイズ付画像を作った
 
 画像は粗めにしたので精度が出なかったら高解像度にしようと思う
+
+## 2021/02/09
+
+↑のやつはむだでした．
+
+Pseudo　Labelingをためしてみたいけど，lossのとり方がいまいちわからないのどどうしていいかわからない．
+
+MSELossっていうやつを使えばよい？
+
+[How to implement pseudo-labeling?](https://discuss.pytorch.org/t/how-to-implement-pseudo-labeling/68557)←これを参考にする
