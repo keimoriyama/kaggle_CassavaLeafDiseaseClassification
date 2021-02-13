@@ -166,3 +166,11 @@ Pseudo　Labelingをためしてみたいけど，lossのとり方がいまい�
 MSELossっていうやつを使えばよい？
 
 [How to implement pseudo-labeling?](https://discuss.pytorch.org/t/how-to-implement-pseudo-labeling/68557)←これを参考にする
+
+## 2021/02/13
+
+pseudo labelingは事前学習したモデルを使ってやってみる．現状うまくいってないけど
+
+LBを更新した．
+
+学習データの不足分を，2019年のデータで補って学習させる
