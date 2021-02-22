@@ -63,6 +63,8 @@ etc.
 
 ## 3rd solution
 
+[3rd Place Solution](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/221150)
+
 ### model
 
 3つのvitモデルを使った
@@ -103,6 +105,8 @@ etc.
 
 ## 5th solution
 
+[5th Place Solution Summary](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/221249)
+
 ### model
 
 vit_16, efNet_b4, Deitのアンサンブル
@@ -137,6 +141,8 @@ vit_16, efNet_b4, Deitのアンサンブル
 5. bi-templated lossは有効だった
 
 ## 8th solution
+
+[8th place solution](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/220994)
 
 ### data
 
