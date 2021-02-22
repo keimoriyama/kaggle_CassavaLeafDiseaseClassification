@@ -57,6 +57,117 @@ etc.
 |       [Vision Transformer (ViT): CUDA as usual](https://www.kaggle.com/szuzhangzhi/vision-transformer-vit-cuda-as-usual/data)       | Vision Transformerのpythonライブラリを使って学習させるサンプル。自作らしい。 |
 | [Ensemble: Resnext50_32x4d + Efficientnet = 0.903](https://www.kaggle.com/japandata509/ensemble-resnext50-32x4d-efficientnet-0-903) |                                  題名のまま                                  |
 
+<details>
+
+<summary>上位陣の解法</summary>
+
+## 3rd solution
+
+### model
+
+3つのvitモデルを使った
+
+  - vit_A
+    - image_size : 384
+    - 5x TTA
+  - vit_B
+    - image_size : 448
+    - 5x TTA
+  - vit_C
+    - image_size : 448
+    - 5x TTA
+    - Label Smoothing
+
+### Augmentation
+
+- Random sized crop
+- Transpose
+- H & V filp
+- Shift scale rotate
+- Normalize & ToTensor
+
+### Scheduler
+
+- Lambda LR
+
+### Attentionについて（vit_B, vit_C）
+
+モデルの画像の入力サイズは224＊224なので以下のフローで処理する
+
+1. 画像を4分割する
+2. 同じモデル（ViT)に画像を入力する
+3. 出力を1つの行列の値にまとめる
+4. Softmaxをかける
+5. 重みをつけて列の和を計算
+6. 5次元に写像
+
+## 5th solution
+
+### model
+
+vit_16, efNet_b4, Deitのアンサンブル
+
+#### train
+
+    - vit
+      - img_size : 384
+      - bi-templated logistic loss
+    - efNet
+      - img+size : 512
+      - bi-templated logistic loss
+    - Deit
+      - img_size : 384
+      - bi-templated logistic loss
+
+### Augmentation
+
+- Random crop
+- transpose
+- H & V flip
+- hue
+- random brightness
+- normalize
+
+### important things
+
+1. ensemble はいいぞ
+2. Cutmixは小さいモデルにおいて有効
+3. ラベルのノイズ除去は有効
+4. 2020年のものだけを使ったほうが良かった
+5. bi-templated lossは有効だった
+
+## 8th solution
+
+### data
+
+2020年のものだけを使用した
+
+### model
+
+EfNet_B6，ResNetSt50，Vit_16
+
+### Augmantation
+
+- H & V flip
+- transpose
+- Hue, Coarse
+- RandomBright
+- shift scale
+- RGB_shift
+- Cutmix, Fmix, snapmix
+
+CutmixとFmixを使ってCVをブーストし，Snapmixで安定化させた
+
+### Loss
+
+label smoothing
+
+### message
+
+諦めなければなんとかなる
+
+</details>
+
 # Logs
 
 ## 2020/11/23
